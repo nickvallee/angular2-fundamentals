@@ -1,0 +1,39 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.mousedown{
+  border: 2px solid green;
+}
+
+.mouseover{
+  transform: scale(1.05);
+}
+
+.update{
+  background-color: orange;
+
+}
+
+.delete{
+  background-color: red;
+}
+
+input{
+  transition: all .1s ease;
+  padding: 8px;
+}
+
+input:focus{
+  font-weight: bold;
+  outline: none;
+}
+
+button{
+  border: none;
+  color: whitesmoke;
+  margin-top: 8px;
+  padding: 8px;
+}

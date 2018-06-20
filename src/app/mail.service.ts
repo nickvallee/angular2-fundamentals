@@ -19,5 +19,13 @@ export class MailService {
     )
   }
 
+  add(id, text) {
+    this.messages.push({id, text})
+  }
+
+  delete(id) {
+    this.messages = this.messages.filter((message) => message.id !== id);
+  }
+
   constructor() { }
 }

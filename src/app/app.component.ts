@@ -11,8 +11,10 @@ import {Component, Inject} from '@angular/core';
           *ngFor="let message of mail.messages"
           [message]="message.text"
           (update)="onUpdate(message.id, $event.text)"
+          (delete)="onDelete(message.id)"
         >
         </app-simple-form>
+      <button (click)="onAdd()">ADD</button>
     </div>`,
   styles: [`
   app-simple-form{
@@ -23,6 +25,14 @@ export class AppComponent {
 
   onUpdate(id, text) {
     this.mail.update(id, text);
+  }
+
+  onDelete(id) {
+    this.mail.delete(id);
+  }
+
+  onAdd() {
+    this.mail.add(this.mail.messages.length + 1, "TEST")
   }
 
   constructor (
